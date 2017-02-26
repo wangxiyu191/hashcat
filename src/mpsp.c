@@ -498,11 +498,15 @@ static void mp_setup_sys (cs_t *mp_sys)
   u32 chr;
   u32 donec[CHARSIZ] = { 0 };
 
-  for (pos =  0, chr =  'a'; chr <=  'z'; chr++) { donec[chr] = 1;
+  u32 a1[] = {'5', 'E', 'U', 'e', 'u'};
+  u32 a2[] = {'6', 'F', 'V', 'f', 'v'};
+
+  for (pos =  0, chr =  a1[0]; pos<5; chr=a1[pos]) { donec[chr] = 1;
                                                    mp_sys[0].cs_buf[pos++] = chr;
                                                    mp_sys[0].cs_len = pos; }
 
-  for (pos =  0, chr =  'A'; chr <=  'Z'; chr++) { donec[chr] = 1;
+
+  for (pos =  0, chr =  a2[0]; pos<5; chr=a2[pos]) { donec[chr] = 1;
                                                    mp_sys[1].cs_buf[pos++] = chr;
                                                    mp_sys[1].cs_len = pos; }
 
