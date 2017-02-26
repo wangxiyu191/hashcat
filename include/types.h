@@ -564,6 +564,9 @@ typedef enum user_options_map
   IDX_CUSTOM_CHARSET_2         = '2',
   IDX_CUSTOM_CHARSET_3         = '3',
   IDX_CUSTOM_CHARSET_4         = '4',
+  IDX_CUSTOM_CHARSET_5         = '5',
+  IDX_CUSTOM_CHARSET_6         = '6',
+  IDX_CUSTOM_CHARSET_7         = '7',
   IDX_DEBUG_FILE               = 0xff03,
   IDX_DEBUG_MODE               = 0xff04,
   IDX_FORCE                    = 0xff05,
@@ -1440,6 +1443,9 @@ typedef struct user_options
   char  *custom_charset_2;
   char  *custom_charset_3;
   char  *custom_charset_4;
+  char  *custom_charset_5;
+  char  *custom_charset_6;
+  char  *custom_charset_7;
   char  *debug_file;
   char  *induction_dir;
   char  *markov_hcstat;
@@ -1596,7 +1602,7 @@ typedef struct mask_ctx
   bool   enabled;
 
   cs_t   mp_sys[8];
-  cs_t   mp_usr[4];
+  cs_t   mp_usr[8];
 
   u64    bfs_cnt;
 
