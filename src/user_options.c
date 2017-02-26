@@ -27,10 +27,6 @@ static const struct option long_options[] =
   {"custom-charset2",           required_argument, 0, IDX_CUSTOM_CHARSET_2},
   {"custom-charset3",           required_argument, 0, IDX_CUSTOM_CHARSET_3},
   {"custom-charset4",           required_argument, 0, IDX_CUSTOM_CHARSET_4},
-  {"custom-charset5",           required_argument, 0, IDX_CUSTOM_CHARSET_5},
-  {"custom-charset6",           required_argument, 0, IDX_CUSTOM_CHARSET_6},
-  {"custom-charset7",           required_argument, 0, IDX_CUSTOM_CHARSET_7},
-
   {"debug-file",                required_argument, 0, IDX_DEBUG_FILE},
   {"debug-mode",                required_argument, 0, IDX_DEBUG_MODE},
   {"force",                     no_argument,       0, IDX_FORCE},
@@ -129,9 +125,6 @@ int user_options_init (hashcat_ctx_t *hashcat_ctx)
   user_options->custom_charset_2          = NULL;
   user_options->custom_charset_3          = NULL;
   user_options->custom_charset_4          = NULL;
-  user_options->custom_charset_5          = NULL;
-  user_options->custom_charset_6          = NULL;
-  user_options->custom_charset_7          = NULL;
   user_options->debug_file                = NULL;
   user_options->debug_mode                = DEBUG_MODE;
   user_options->force                     = FORCE;
@@ -338,10 +331,6 @@ int user_options_getopt (hashcat_ctx_t *hashcat_ctx, int argc, char **argv)
       case IDX_CUSTOM_CHARSET_2:          user_options->custom_charset_2          = optarg;         break;
       case IDX_CUSTOM_CHARSET_3:          user_options->custom_charset_3          = optarg;         break;
       case IDX_CUSTOM_CHARSET_4:          user_options->custom_charset_4          = optarg;         break;
-      case IDX_CUSTOM_CHARSET_5:          user_options->custom_charset_5         = optarg;         break;
-      case IDX_CUSTOM_CHARSET_6:          user_options->custom_charset_6          = optarg;         break;
-      case IDX_CUSTOM_CHARSET_7:          user_options->custom_charset_7          = optarg;         break;
-
 
       default:
       {
